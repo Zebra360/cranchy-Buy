@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #ff8c00, #ff4500);
+}
+
+.navBar {
+  width: 100%;
+  height: 65px;
+  background: linear-gradient(to bottom, rgba(255, 140, 0, 0.6), rgba(0,0,0,.1));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navLeft, .navRight {
+  display: flex;
+  gap: 10px;
+  font-size: 25px;
+}
+
+.cranchyCard{
+  width: 420px;
+  background: linear-gradient(to bottom, #ff8c00, #ff4500);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2.5px 2.5px black, -2px -2px white;
+}
+
+.crBanner{
+  width: 400px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.info{
+  display: flex;
+  color: #fff;
+  word-wrap: wrap;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 18px 0 18px;
+}
+
+.crLogo{
+  width: 50px;
+  background: black;
+  border-radius: 50%;
+}
+
+.avatar{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.button{
+  width: 90%;
+  height: 30px;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, rgba(255, 140, 0, 0.6), rgba(0,0,0,.1));
+  box-shadow: 2px 2px;
+  margin: 10px 0 10px 0;
+  
+}
