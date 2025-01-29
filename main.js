@@ -1,5 +1,5 @@
 let btn = document.querySelector('.button');
 
 btn.addEventListener('click',() => {
-  window.location.href = "https://t.me/cranchyrollHub ";
+  window.location.href = "t.me/XDKOZ20";
 })
