@@ -6,80 +6,85 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Proof</title>
   <style>
-    *{
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body{
-  text-align: center;
-  padding: 0 10px 0 10px;
-}
-.shotProofs{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 30px;
-}
+    body {
+      text-align: center;
+      padding: 10px;
+    }
 
-h1{
-  display: block;
-  
-}
+    .shotProofs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 30px;
+    }
 
-img{
-  width: 200px;
-  position: static;
-  transition: width .3 ease;
-}
+    h1 {
+      display: block;
+    }
 
-.button{
-  position: fixed;
-  top: 0;
-  left: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 2px 2px black;
-  background: whitesmoke;
-  font-size: 18px;
-  border: none;
-  color: black;
-  opacity: 0;
-  z-index: 10;
-}
+    img {
+      width: 200px;
+      transition: width 0.3s ease;
+      cursor: pointer;
+    }
+
+    .button {
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 2px 2px black;
+      background: whitesmoke;
+      font-size: 18px;
+      border: none;
+      color: black;
+      opacity: 0;
+      z-index: 10;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
   </style>
-  <link rel="stylesheet" href="/Proof/proofStyle.css" type="text/css" media="all" />
 </head>
 <body>
   <h1>PROOFS</h1>
   <div class="shotProofs">
     <img src="proof1.jpg" alt="">
   </div>
-  
-  <script>
-    let proofImgs = document.querySelectorAll('img');
-let backBtn = document.querySelector('.button');
 
-proofImgs.forEach(img => {
-  img.addEventListener('click', () => {
-    img.style.width = '100%';
-    img.style.position = 'fixed';
-    img.style.top = '0';
-    img.style.zIndex = '1';
-    backBtn.style.opacity = '1';
-  });
-});
+  <!-- Added the missing button -->
+  <button class="button">X</button>
 
-backBtn.addEventListener('click', () => {
-  proofImgs.forEach(img => {
-    img.style.width = '200px';
-    img.style.position = 'static';
-    img.style.top = '';
-    img.style.zIndex = '';
-  });
-});
+  <script type="text/javascript" charset="utf-8">
+    let proofImgs = document.querySelectorAll('.shotProofs img');
+    let backBtn = document.querySelector('.button');
+
+    proofImgs.forEach(img => {
+      img.addEventListener('click', () => {
+        img.style.width = '100%';
+        img.style.position = 'fixed';
+        img.style.top = '0';
+        img.style.left = '0';
+        img.style.zIndex = '10';
+        backBtn.style.opacity = '1';
+      });
+    });
+
+    backBtn.addEventListener('click', () => {
+      proofImgs.forEach(img => {
+        img.style.width = '200px';
+        img.style.position = 'static';
+        img.style.zIndex = '1';
+      });
+      backBtn.style.opacity = '0';
+    });
   </script>
 </body>
 </html>
