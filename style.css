@@ -79,11 +79,11 @@ body {
 .button{
   width: 90%;
   height: 30px;
-  color: black;
+  color: whitesmoke;
   border: none;
   border-radius: 15px;
   background: linear-gradient(to bottom, rgba(255, 140, 0, 0.6), rgba(0,0,0,.1));
   box-shadow: 2px 2px;
   margin: 10px 0 10px 0;
-  
+  text-align: center;
 }
